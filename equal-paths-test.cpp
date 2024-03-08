@@ -55,18 +55,32 @@ void test5(const char* msg)
   cout << msg << ": " <<   equalPaths(a) << endl;
 }
 
+void test6(const char* msg)
+{
+  setNode(a,1,b,c);
+  setNode(b,2,d,f);
+  setNode(c,3,NULL,e);
+  setNode(d,4,NULL,NULL); 
+  setNode(f,6,NULL,NULL);
+  setNode(e,5,NULL,NULL);
+  cout << msg << ": " <<   equalPaths(a) << endl;
+}
+
 int main()
 {
   a = new Node(1);
   b = new Node(2);
   c = new Node(3);
   d = new Node(4);
+  e = new Node(5);
+  f = new Node(6);
 
   test1("Test1");
   test2("Test2");
   test3("Test3");
   test4("Test4");
   test5("Test5");
+  test6("Test6");
  
   delete a;
   delete b;
